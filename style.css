@@ -1,0 +1,73 @@
+:root {
+  --color-primary: #0ce7b0;
+  --gradient-primary: linear-gradient(
+    to right bottom,
+    #0ce7b0,
+    #00c7b3,
+    #00a6ab
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+/* Use grid to place the test nav bar in the middle of the page */
+body {
+  font-weight: 300;
+  color: #2e2e2e;
+  line-height: 2;
+  background: var(--gradient-primary);
+  display: grid;
+}
+
+/* General Elements */
+
+p {
+  color: #000000;
+  z-index: 1;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 4rem;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.main__content {
+  margin: 50px;
+  background-color: #ffffff;
+}
+
+.section,
+.test__section {
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.test__section {
+  width: 50%;
+  position: absolute;
+  z-index: 100;
+}
