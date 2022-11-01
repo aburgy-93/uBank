@@ -9,31 +9,52 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <section class="test__section">TEST</section>
-    <main class="main__content">
-      <header class="header">
-        <nav class="nav">
-          <img src="" alt="uBank Logo" id="logo" />
-          <ul class="nav__links">
-            <li class="nav__item">
-              <a class="nav__link" href="#section--1">Features</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section--2">Space 2</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#section--3">Space 3</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--btn btn--show-modal" href="#"
-                >Open Account</a
-              >
-            </li>
-          </ul>
-        </nav>
 
-        
-  
+    <main class="main__content">
+
+      <nav class="fixed__nav">
+        <ul class="list__left">
+          <li class="fixed__nav__item">
+            <a id="link" class="fixed__nav__link" href="" >Locations</a>
+          </li>
+          <li class="fixed__nav__item">
+            <a id="link" class="fixed__nav__link" href="" >Business</a>
+          </li>
+        </ul>
+        <ul class="list__right">
+          <li class="fixed__nav__item">
+            <a id="link" class="fixed__nav__link" href="" >(877) 867-5309</a>
+          </li>
+          <li class="fixed__nav__item">
+            <a id="link" class="fixed__nav__link" href="" >US Flag</a>
+          </li>
+          <li class="fixed__nav__item">
+            <a id="link" class="fixed__nav__link" href="" >EU Flag</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav floating__nav">
+        <img src="" alt="uBank Logo" id="logo" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Features</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Space 2</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Space 3</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >Open Account</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <header class="header">
         <div class="header__title">
           <h1>
             <!-- Change Later -->
@@ -46,18 +67,19 @@
             A banking expierence where you are in control.
           </h4>
           <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-          <img src="" alt="Banking for you img" class="header__img" />
         </div>
+        <img src="images/online_banking.jpg" alt="Banking for you img" class="header__img" />
+
       </header>
-  
+
       <section class="section" id="section--1">
         <div class="section__title">
           <h2 class="section__description">Features</h2>
-          <h3 class="section__header"></h3>
+          <h3 class="section__header">Everything you need in a modern bank and more</h3>
         </div>
-  
+
         <div class="features">
-          <img src="" data-src="" alt="Computer" class="features__img lazy-img" />
+          <img src="images/computer.jpg" data-src="" alt="Computer" class="features__img lazy-img" />
           <div class="features__feature">
             <div class="features__icon">
               <svg>
@@ -71,7 +93,7 @@
               debitis ducimus.
             </p>
           </div>
-  
+
           <div class="features__feature">
             <div class="features__icon">
               <svg>
@@ -84,16 +106,17 @@
               inventore ab? Nulla incidunt eius numquam sequi iste pariatur
               quibusdam!
             </p>
+          <img src="images/graph.jpg" data-src="" alt="Graph" class="features__img lazy-img" />
           </div>
-          <img src="" data-src="" alt="Graph" class="features__img lazy-img" />
-  
-          <img
-            src=""
+
+         
+          <div class="features__feature">
+            <img
+            src="images/credit_card.webp"
             data-src=""
             alt="Credit card"
             class="features__img lazy-img"
           />
-          <div class="features__feature">
             <div class="features__icon">
               <svg>
                 <use xlink:href="change later"></use>
@@ -108,7 +131,7 @@
           </div>
         </div>
       </section>
-  
+
       <section class="section" id="section--2">
         <div class="section__title">
           <h2 class="section__description">Operations</h2>
@@ -116,7 +139,7 @@
             Everything as simple as possible, just for you.
           </h3>
         </div>
-  
+
         <div class="operations">
           <div class="operations__tab-container">
             <button
@@ -150,7 +173,7 @@
               aliquip ex ea commodo consequat.
             </p>
           </div>
-  
+
           <div class="operations__icon operations__icon--2">
               <svg>
                 <use xlink:href="change later"></use>
@@ -166,7 +189,7 @@
               anim id est laborum.
             </p>
           </div>
-  
+
           <div class="operations__icon operations__icon--3">
               <svg>
                 <use xlink:href="change later"></use>
@@ -185,7 +208,7 @@
           </div>
         </div>
       </section>
-  
+
       <section class="section" id="section--3">
           <div class="section__title section__title--testimonials">
               <h2 class="section__description">Not Sure Yet?</h2>
@@ -193,7 +216,7 @@
                   Millions of uBankers are already making their lifes simpler.
               </h2>
           </div>
-  
+
           <div class="slider">
               <div class="slide slide--1">
                   <div class="testimonial">
@@ -213,7 +236,7 @@
                       </address>
                   </div>
               </div>
-  
+
               <div class="slide slide--2">
                   <div class="testimonial">
                       <h5 class="testimonial__header">All other banks are cringe and stinky.</h5>
@@ -231,7 +254,7 @@
                       </address>
                   </div>
               </div>
-  
+
               <div class="slide slide--3">
                   <div class="testimonial">
                       <h5 class="testimonial__header">I secured the bag, and uBank keeps it safe</h5>
@@ -255,7 +278,7 @@
               <div class="dots"></div>
           </div>
       </section>
-  
+
       <section class="section section--sign-up">
           <div class="section__title">
               <h3 class="section__header">
@@ -264,7 +287,7 @@
           </div>
           <button class="btn btn--show-modal">Open your free account today!</button>
       </section>
-  
+
       <footer class="footer">
           <ul class="footer__nav">
               <li class="footer__item">
@@ -295,7 +318,7 @@
               <a class="footer__link gitHub-link" href="">Alex Burgy</a>
           </p>
       </footer>
-  
+
       <div class="modal hidden">
           <button class="btn--close-modal">&times;</button>
           <h2 class="modal__header">Open your bank account <br />
@@ -315,6 +338,6 @@
           >
 
     </main>
-    
+
   </body>
 </html>
