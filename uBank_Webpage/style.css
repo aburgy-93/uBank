@@ -155,8 +155,14 @@ img {
   top: 4rem;
   transform: translate(0%, 50%);
   box-shadow: 10px 10px 25px #d1d1d1;
+  background-color: white;
 
   min-width: 1000px;
+}
+
+.ubank--logo {
+  height: 50px;
+  width: 200px;
 }
 
 .nav.sticky {
