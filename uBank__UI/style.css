@@ -1,0 +1,89 @@
+:root {
+  --color-primary: #0ce7b0;
+  --gradient-primary: linear-gradient(
+    to right bottom,
+    #0ce7b0,
+    #00c7b3,
+    #00a6ab
+  );
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #2e2e2e;
+  line-height: 2;
+  background: var(--gradient-primary);
+  height: 100vh;
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 1fr 2fr;
+  background-color: white;
+  margin: 50px 10px 50px 10px;
+}
+
+.uBank--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2 / 3;
+}
+
+.uBank--left--nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.pfp {
+  /* center later */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 100px;
+  width: 100px;
+}
+
+.nav__btn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.nav__btn:hover {
+  text-decoration: underline;
+}
+
+.account__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.balance {
+  grid-column: 1 / 3;
+}
+
+.movements {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.summary {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.logout__timer {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
