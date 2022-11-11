@@ -61,28 +61,52 @@
       <main class="account__content">
         <!-- Balance -->
         <div class="balance">
-          <div>
+          <div class="balance__header">
             <p class="balance__label">Current Balance</p>
             <p class="balance__date">
               As of <span class="date">11/08/2022</span>
             </p>
+            <p class="balance__value">$420.69</p>
           </div>
-          <p class="balance__value">$420.69</p>
+
+          <div class="operation operation--close">
+            <h2>Close Account</h2>
+            <form class="form form--close">
+              <input type="text" class="form__input form__input--user" />
+              <button class="form__btn form__btn--close">&rarr;</button>
+              <label class="form__label">Confirm user</label>
+              <label class="form__label">Confirm PIN</label>
+            </form>
+          </div>
         </div>
+
+        <!-- <div class="card__information">
+          <p>Not sure what goes here yet</p>
+        </div> -->
+
+        <div class="graph">Graph Here</div>
 
         <!-- Movements -->
         <div class="movements">
           <div class="movements__row">
-            <div class="movements__type movement__type--deposit">2 deposit</div>
-            <div class="movements__date">3 days ago</div>
+            <div class="movements__left">
+              <div class="movements__type movement__type--deposit">
+                2 deposit
+              </div>
+              <div class="movements__date">3 days ago</div>
+            </div>
+
             <div class="movements__value">$4 000</div>
           </div>
 
           <div class="movements__row">
-            <div class="movements__type movement__type--deposit">
-              1 withdrawl
+            <div class="movements__left">
+              <div class="movements__type movement__type--withdrawal">
+                1 withdrawl
+              </div>
+              <div class="movements__date">1 days ago</div>
             </div>
-            <div class="movements__date">1 days ago</div>
+
             <div class="movements__value">$59</div>
           </div>
         </div>
@@ -98,8 +122,8 @@
           <button class="btn--sort">&downarrow; SORT</button>
         </div>
 
+        <!-- Operation: Transfers -->
         <div class="operations">
-          <!-- Operation: Transfers -->
           <div class="operation operation--transfer">
             <h2>Transfer Money</h2>
             <form class="form form--transfer">
@@ -120,18 +144,27 @@
               <label class="form__label">Amount</label>
             </form>
           </div>
-
-          <!-- Close Account -->
-          <div class="operation operation--close">
-            <h2>Transfer Money</h2>
-            <form class="form form--close">
-              <input type="text" class="form__input form__input--user" />
-              <button class="form__btn form__btn--close">&rarr;</button>
-              <label class="form__label">Confirm user</label>
-              <label class="form__label">Confirm PIN</label>
-            </form>
-          </div>
         </div>
+
+        <div class="contact__list">
+          <h4>Contact List</h4>
+          <p class="contact">Garry</p>
+          <p class="contact">Terry</p>
+          <p class="contact">Jerry</p>
+          <p class="contact">Lenny</p>
+          <p class="contact">Barry</p>
+        </div>
+
+        <!-- Close Account -->
+        <!-- <div class="operation operation--close">
+          <h2>Close Account</h2>
+          <form class="form form--close">
+            <input type="text" class="form__input form__input--user" />
+            <button class="form__btn form__btn--close">&rarr;</button>
+            <label class="form__label">Confirm user</label>
+            <label class="form__label">Confirm PIN</label>
+          </form>
+        </div> -->
 
         <!-- Logout Timer  -->
         <div class="logout__timer">
