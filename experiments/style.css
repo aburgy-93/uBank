@@ -1,0 +1,69 @@
+:root {
+  --color-primary: #0ce7b0;
+  --gradient-primary: linear-gradient(
+    to right bottom,
+    #0ce7b0,
+    #00c7b3,
+    #00a6ab
+  );
+  --transition-drawer: width 0.4s ease-in;
+  --drawer--width: clamp(210px, 22vw, 325px);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #2e2e2e;
+  line-height: 2;
+  background: var(--gradient-primary);
+  height: 100%;
+}
+
+.main__content {
+  display: grid;
+  grid-template-areas:
+    "drawer nav nav nav"
+    "drawer content content content";
+  grid-template-columns: 5rem 1fr 4fr 1fr;
+  grid-template-rows: 0.8fr 4fr;
+  background-color: white;
+  margin: 50px 10px 50px 10px;
+}
+
+.uBank--left--nav {
+  grid-area: drawer;
+}
+
+.uBank--left--nav:hover {
+  width: var(--drawer--width);
+}
+
+.account__content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "card-info graph graph ads"
+    "card-info movs movs contacts";
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.graph {
+  grid-area: graph;
+}
+
+.movements {
+  grid-area: movs;
+}
+
+.contact__list {
+  grid-area: contacts;
+}
+
+.summary {
+  grid-column: -4 / -2;
+}
+
+.logout__timer {
+  grid-column: -2 / -1;
+}
