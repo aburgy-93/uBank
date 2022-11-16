@@ -50,6 +50,13 @@ const btnTransfer = document.querySelector(".form__btn--transfer");
 const inputTransferUsername = document.querySelector(".form__input--to");
 const inputTransferAmount = document.querySelector(".form__input--amount");
 
+const btnLoan = document.querySelector(".form__btn--loan");
+const inputLoanAmount = document.querySelector(".form__input--loan");
+
+const btnClose = document.querySelector(".form__btn--close");
+const inputCloseAccount = document.querySelector(".form__input--user");
+const inputClosePin = document.querySelector(".form__input--pin");
+
 // Project Logic
 
 // display movements
@@ -173,8 +180,6 @@ btnTransfer.addEventListener("click", function (e) {
     (acc) => acc.username === inputTransferUsername.value
   );
 
-  console.log(inputTransferAmount.value, inputTransferUsername.value);
-
   if (
     amount > 0 &&
     currentAccount.balance >= amount &&
@@ -192,4 +197,47 @@ btnTransfer.addEventListener("click", function (e) {
   // Clear fields
   inputTransferUsername.value = inputTransferAmount.value = "";
   inputLoginPin.blur();
+});
+
+// Implement Loans
+
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+  const loanAmnt = Number(inputLoanAmount.value);
+
+  // check if any deposits are >= 10% loan amount
+  if (
+    loanAmnt > 0 &&
+    currentAccount.movements.some((mov) => mov >= 0.1 * loanAmnt)
+  ) {
+    // adding the loan to account
+    currentAccount.movements.push(loanAmnt);
+
+    // Update UI
+    updateUI(currentAccount);
+  }
+
+  inputLoanAmount.value = "";
+  inputLoanAmount.blur();
+});
+
+btnClose.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (
+    currentAccount.username === inputCloseAccount.value &&
+    currentAccount.pin === Number(inputClosePin.value)
+  ) {
+    const index = accounts.findIndex(
+      (acc) => acc.username === currentAccount.username
+    );
+
+    accounts.splice(index, 1);
+
+    // Update UI
+    accountContent.style.opacity = 0;
+    leftNav.style.opacity = 0;
+  }
+
+  inputCloseAccount.value = inputClosePin.value = "";
 });
